@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Form - Happy Tails Pet Adoption Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> <!-- Include the Caveat font -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Happy Tails</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Cost Calculator</a></li>
+                <li><a href="#" onclick="showAdoptionForm()">Adoption Form</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Adoption Form Section -->
+    <section class="section adoption-form">
+        <h2>Adoption Inquiry Form</h2>
+        <form id="inquiryForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="petPreference">Pet Preference:</label>
+                <select id="petPreference" required>
+                    <option value="" disabled selected>Select a Pet</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="bird">Bird</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Inquiry</button>
+            <button type="button" class="back-button" onclick="goBack()">Back to Home</button>
+            <p id="formResult"></p>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

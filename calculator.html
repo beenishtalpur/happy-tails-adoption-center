@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Title</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playwright+England+SemiJoined&display=swap" rel="stylesheet"> <!-- Add this line -->
+    </head>
+    
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Happy Tails</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="showCalculator()">Cost Calculator</a></li>
+                <li><a href="adoption-form.html">Adoption Form</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cost Calculator Section -->
+    <section class="section calculator">
+        <h2>Pet Care Cost Calculator</h2>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="petType">Pet Type:</label>
+                <select id="petType" required>
+                    <option value="" disabled selected>Select Pet Type</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="bird">Bird</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="petSize">Pet Size:</label>
+                <select id="petSize" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="petAge">Pet Age:</label>
+                <select id="petAge" required>
+                    <option value="" disabled selected>Select Age</option>
+                    <option value="young">Young</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+
+            <button type="button" class="calculate-button" onclick="calculateCost()">Calculate Monthly Cost</button>
+            <p id="costResult" class="result"></p>
+            <button type="button" class="back-button" onclick="goBack()">Back to Home</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
